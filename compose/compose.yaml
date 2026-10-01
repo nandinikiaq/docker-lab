@@ -1,0 +1,24 @@
+services:
+  site1:
+    image: nginx:alpine
+    container_name: docker-lab-site1
+    ports:
+      - "3001:80"
+    volumes:
+      - ./folder1:/usr/share/nginx/html:ro
+
+  site2:
+    image: nginx:alpine
+    container_name: docker-lab-site2
+    ports:
+      - "3002:80"
+    volumes:
+      - ./folder2:/usr/share/nginx/html:ro
+
+  site3:
+    image: nginx:alpine
+    container_name: docker-lab-site3
+    ports:
+      - "3003:80"
+    volumes:
+      - ./folder3:/usr/share/nginx/html:ro
